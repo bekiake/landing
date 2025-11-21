@@ -3,7 +3,7 @@ const nextConfig = {
   i18n: {
     locales: ['uz', 'ru', 'en'],
     defaultLocale: 'uz',
-    localeDetection: true,
+    localeDetection: false,
   },
   reactStrictMode: true,
   images: {

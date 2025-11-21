@@ -1,4 +1,6 @@
 import { ArrowRight, Calendar, Users, Home, Plane } from 'lucide-react';
+import { useState } from 'react';
+import { BookingModal } from './BookingModal';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { ScrollReveal, ParallaxSection } from './ScrollReveal';
 
@@ -107,6 +109,7 @@ const translations = {
 
 export function UmrahSection({ language }: UmrahSectionProps) {
   const t = translations[language];
+  const [modalOpen, setModalOpen] = useState(false);
 
   const packages = [
     {
@@ -125,70 +128,76 @@ export function UmrahSection({ language }: UmrahSectionProps) {
   ];
 
   return (
-    <section id="umra-turlari" className="py-16 lg:py-24 bg-gradient-to-b from-blue-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ScrollReveal>
-          <div className="text-center mb-12">
-            <h2 className="mb-4 text-gray-900">{t.title}</h2>
-            <p className="text-xl text-gray-600">{t.subtitle}</p>
-          </div>
-        </ScrollReveal>
+    <>
+      <BookingModal open={modalOpen} onOpenChange={setModalOpen} language={language} />
+      <section id="umra-turlari" className="py-16 lg:py-24 bg-gradient-to-b from-blue-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <h2 className="mb-4 text-gray-900">{t.title}</h2>
+              <p className="text-xl text-gray-600">{t.subtitle}</p>
+            </div>
+          </ScrollReveal>
 
-        {/* Background Image Banner */}
-        <ScrollReveal>
-          <div className="relative h-64 rounded-3xl overflow-hidden mb-12">
-            <ImageWithFallback
-              src="https://images.unsplash.com/photo-1720549973451-018d3623b55a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrYWFiYSUyMG1lY2NhfGVufDF8fHx8MTc2MzcxMDM4NXww&ixlib=rb-4.1.0&q=80&w=1080"
-              alt="Kaaba"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-          </div>
-        </ScrollReveal>
+          {/* Background Image Banner */}
+          <ScrollReveal>
+            <div className="relative h-64 rounded-3xl overflow-hidden mb-12">
+              <ImageWithFallback
+                src="https://images.unsplash.com/photo-1720549973451-018d3623b55a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrYWFiYSUyMG1lY2NhfGVufDF8fHx8MTc2MzcxMDM4NXww&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Kaaba"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+            </div>
+          </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {packages.map((pkg, idx) => (
-            <ScrollReveal key={idx}>
-              <div
-                className={`bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full ${
-                  pkg.featured ? 'ring-2 ring-yellow-400 transform md:scale-105' : ''
-                }`}
-              >
-                {/* Header with gradient */}
-                <div className={`bg-gradient-to-r ${pkg.gradient} p-6 text-white`}>
-                  <h3 className="text-white mb-2">{pkg.name}</h3>
-                  <div className="text-3xl">{pkg.price}</div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {packages.map((pkg, idx) => (
+              <ScrollReveal key={idx}>
+                <div
+                  className={`bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full ${
+                    pkg.featured ? 'ring-2 ring-yellow-400 transform md:scale-105' : ''
+                  }`}
+                >
+                  {/* Header with gradient */}
+                  <div className={`bg-gradient-to-r ${pkg.gradient} p-6 text-white`}>
+                    <h3 className="text-white mb-2">{pkg.name}</h3>
+                    <div className="text-3xl">{pkg.price}</div>
+                  </div>
+
+                  {/* Features */}
+                  <div className="p-6 space-y-4">
+                    <div className="flex items-center gap-3 text-gray-700">
+                      <Calendar className="w-5 h-5 text-blue-600" />
+                      <span>{pkg.duration}</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-gray-700">
+                      <Users className="w-5 h-5 text-blue-600" />
+                      <span>{pkg.people}</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-gray-700">
+                      <Home className="w-5 h-5 text-blue-600" />
+                      <span>{pkg.hotel}</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-gray-700">
+                      <Plane className="w-5 h-5 text-blue-600" />
+                      <span>{t.features.flight}</span>
+                    </div>
+
+                    <button
+                      className="w-full mt-6 bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
+                      onClick={() => setModalOpen(true)}
+                    >
+                      {t.cta}
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
                 </div>
-
-                {/* Features */}
-                <div className="p-6 space-y-4">
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <Calendar className="w-5 h-5 text-blue-600" />
-                    <span>{pkg.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <Users className="w-5 h-5 text-blue-600" />
-                    <span>{pkg.people}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <Home className="w-5 h-5 text-blue-600" />
-                    <span>{pkg.hotel}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <Plane className="w-5 h-5 text-blue-600" />
-                    <span>{t.features.flight}</span>
-                  </div>
-
-                  <button className="w-full mt-6 bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-lg">
-                    {t.cta}
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            </ScrollReveal>
-          ))}
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

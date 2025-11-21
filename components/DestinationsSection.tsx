@@ -1,4 +1,6 @@
 import { ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import { BookingModal } from './BookingModal';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { ScrollReveal, ParallaxSection } from './ScrollReveal';
 
@@ -60,49 +62,57 @@ const destinations = [
   }
 ];
 
+
 export function DestinationsSection({ language }: DestinationsSectionProps) {
   const t = translations[language];
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <ParallaxSection 
-      backgroundImage="https://images.unsplash.com/photo-1756630645698-3f03d728393c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdW5zZXQlMjBjbG91ZHMlMjBza3klMjBhdmlhdGlvbnxlbnwxfHx8fDE3NjM3MTE1MDV8MA&ixlib=rb-4.1.0&q=80&w=1080"
-      speed={0.3}
-      className="py-16 lg:py-24"
-    >
-      <section id="aviabiletlar">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <h2 className="text-center mb-12 text-gray-900">{t.title}</h2>
-          </ScrollReveal>
-          
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {destinations.map((dest, idx) => (
-              <ScrollReveal key={idx}>
-                <div
-                  className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer h-full"
-                >
-                  <div className="relative h-48 overflow-hidden">
-                    <ImageWithFallback
-                      src={dest.image}
-                      alt={dest.city}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+    <>
+      <BookingModal open={modalOpen} onOpenChange={setModalOpen} language={language} />
+      <ParallaxSection 
+        backgroundImage="https://images.unsplash.com/photo-1756630645698-3f03d728393c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdW5zZXQlMjBjbG91ZHMlMjBza3klMjBhdmlhdGlvbnxlbnwxfHx8fDE3NjM3MTE1MDV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+        speed={0.3}
+        className="py-16 lg:py-24"
+      >
+        <section id="aviabiletlar">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal>
+              <h2 className="text-center mb-12 text-gray-900">{t.title}</h2>
+            </ScrollReveal>
+            
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {destinations.map((dest, idx) => (
+                <ScrollReveal key={idx}>
+                  <div
+                    className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer h-full"
+                  >
+                    <div className="relative h-48 overflow-hidden">
+                      <ImageWithFallback
+                        src={dest.image}
+                        alt={dest.city}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                    </div>
+                    <div className="p-6">
+                      <h3 className="mb-1 text-gray-900">{dest.city}</h3>
+                      <p className="text-gray-600 mb-4">{dest.country[language]}</p>
+                      <button
+                        className="flex items-center gap-2 text-blue-700 hover:gap-3 transition-all"
+                        onClick={() => setModalOpen(true)}
+                      >
+                        {t.cta}
+                        <ArrowRight className="w-4 h-4" />
+                      </button>
+                    </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="mb-1 text-gray-900">{dest.city}</h3>
-                    <p className="text-gray-600 mb-4">{dest.country[language]}</p>
-                    <button className="flex items-center gap-2 text-blue-700 hover:gap-3 transition-all">
-                      {t.cta}
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-    </ParallaxSection>
+        </section>
+      </ParallaxSection>
+    </>
   );
 }
