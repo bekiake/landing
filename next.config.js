@@ -1,0 +1,14 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  i18n: {
+    locales: ['uz', 'ru', 'en'],
+    defaultLocale: 'uz',
+    localeDetection: true,
+  },
+  reactStrictMode: true,
+  images: {
+    domains: [],
+  },
+};
+
+module.exports = nextConfig;
