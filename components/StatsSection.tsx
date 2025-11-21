@@ -48,7 +48,7 @@ export function StatsSection({ language }: StatsSectionProps) {
                   {stat.number}
                 </div>
                 <div className="text-sm lg:text-base text-gray-600">
-                  {stat.label}
+                    {stat.label}
                 </div>
               </div>
             </ScrollReveal>

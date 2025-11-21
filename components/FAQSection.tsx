@@ -96,6 +96,22 @@ const translations = {
   }
 };
 
+export function getFAQSchema(language: 'uz' | 'ru' | 'en') {
+  const t = translations[language];
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: t.faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer
+      }
+    }))
+  };
+}
+
 export function FAQSection({ language }: FAQSectionProps) {
   const t = translations[language];
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -125,7 +141,7 @@ export function FAQSection({ language }: FAQSectionProps) {
                   />
                 </button>
                 {openIndex === idx && (
-                  <div className="px-6 pb-5 text-gray-600">
+                  <div className="px-6 pb-5 text-gray-900">
                     {faq.answer}
                   </div>
                 )}

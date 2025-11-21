@@ -111,7 +111,8 @@ export function UmrahSection({ language }: UmrahSectionProps) {
   const t = translations[language];
   const [modalOpen, setModalOpen] = useState(false);
 
-  const packages = [
+  type PackageType = typeof t.package1 & { gradient: string; featured?: boolean };
+  const packages: PackageType[] = [
     {
       ...t.package1,
       gradient: 'from-blue-500 to-blue-700'
@@ -130,7 +131,7 @@ export function UmrahSection({ language }: UmrahSectionProps) {
   return (
     <>
       <BookingModal open={modalOpen} onOpenChange={setModalOpen} language={language} />
-      <section id="umra-turlari" className="py-16 lg:py-24 bg-gradient-to-b from-blue-50 to-white">
+      <section id="umra-turlari" className="py-16 lg:py-24 bg-linear-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-12">
@@ -147,7 +148,7 @@ export function UmrahSection({ language }: UmrahSectionProps) {
                 alt="Kaaba"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent"></div>
             </div>
           </ScrollReveal>
 
@@ -160,7 +161,7 @@ export function UmrahSection({ language }: UmrahSectionProps) {
                   }`}
                 >
                   {/* Header with gradient */}
-                  <div className={`bg-gradient-to-r ${pkg.gradient} p-6 text-white`}>
+                  <div className={`bg-linear-to-r ${pkg.gradient} p-6 text-white`}>
                     <h3 className="text-white mb-2">{pkg.name}</h3>
                     <div className="text-3xl">{pkg.price}</div>
                   </div>
@@ -185,7 +186,7 @@ export function UmrahSection({ language }: UmrahSectionProps) {
                     </div>
 
                     <button
-                      className="w-full mt-6 bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
+                      className="w-full mt-6 bg-linear-to-r from-blue-600 to-blue-700 text-white py-3 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
                       onClick={() => setModalOpen(true)}
                     >
                       {t.cta}

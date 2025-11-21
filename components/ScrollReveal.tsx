@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useRef, ReactNode, useEffect, useState } from 'react';
+import Image from 'next/image';
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -57,9 +58,17 @@ export function ParallaxSection({
           style={{ y }}
           className="absolute inset-0 -z-10"
         >
-          <div 
-            className="absolute inset-0 w-full h-[120%] bg-cover bg-center"
-            style={{ backgroundImage: `url(${backgroundImage})` }}
+          <Image
+            src={backgroundImage}
+            alt=""
+            fill
+            className="object-cover w-full h-full"
+            quality={80}
+            priority={false}
+            loading="lazy"
+            draggable={false}
+            unoptimized={false}
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-linear-to-b from-white/80 via-white/70 to-white/80" />
         </motion.div>

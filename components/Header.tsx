@@ -1,6 +1,7 @@
 import { Phone, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
+
 interface HeaderProps {
   language: 'uz' | 'ru' | 'en';
   setLanguage: (lang: 'uz' | 'ru' | 'en') => void;
@@ -8,15 +9,30 @@ interface HeaderProps {
 
 const translations = {
   uz: {
-    nav: ['Aviabiletlar', 'Umra turlari', 'Biz haqimizda', 'Aloqa'],
+    nav: [
+      { label: 'Aviabiletlar', anchor: 'aviabiletlar' },
+      { label: 'Umra turlari', anchor: 'umra-turlari' },
+      { label: 'Biz haqimizda', anchor: 'biz-haqimizda' },
+      { label: 'Aloqa', anchor: 'footer' }
+    ],
     cta: "+998901234567"
   },
   ru: {
-    nav: ['Авиабилеты', 'Тур Умра', 'О нас', 'Контакты'],
+    nav: [
+      { label: 'Авиабилеты', anchor: 'aviabiletlar' },
+      { label: 'Тур Умра', anchor: 'umra-turlari' },
+      { label: 'О нас', anchor: 'biz-haqimizda' },
+      { label: 'Контакты', anchor: 'footer' }
+    ],
     cta: '+998901234567'
   },
   en: {
-    nav: ['Airline Tickets', 'Umrah Tours', 'About Us', 'Contact'],
+    nav: [
+      { label: 'Airline Tickets', anchor: 'aviabiletlar' },
+      { label: 'Umrah Tours', anchor: 'umra-turlari' },
+      { label: 'About Us', anchor: 'biz-haqimizda' },
+      { label: 'Contact', anchor: 'footer' }
+    ],
     cta: '+998901234567'
   }
 };
@@ -32,22 +48,23 @@ export function Header({ language, setLanguage }: HeaderProps) {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-linear-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
                 <span className="text-white text-xl">✈</span>
               </div>
-              <span className="text-2xl bg-gradient-to-r from-blue-700 to-blue-900 bg-clip-text text-transparent">Airticket</span>
+              <span className="text-2xl bg-linear-to-r from-blue-700 to-blue-900 bg-clip-text text-transparent">Airticket</span>
             </div>
           </div>
-
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8" aria-label="Главная навигация">
             {t.nav.map((item, idx) => (
               <a
                 key={idx}
-                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                href={`#${item.anchor}`}
                 className="text-gray-700 hover:text-blue-700 transition-colors"
+                aria-label={item.label}
+                tabIndex={0}
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </nav>
@@ -82,9 +99,11 @@ export function Header({ language, setLanguage }: HeaderProps) {
             </div>
             <a
               href="tel:+998901234567"
-              className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all shadow-md hover:shadow-lg"
+              className="flex items-center gap-2 bg-linear-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all shadow-md hover:shadow-lg"
+              aria-label="Позвонить в агентство"
+              role="button"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4" aria-hidden="true" />
               {t.cta}
             </a>
           </div>
@@ -103,15 +122,17 @@ export function Header({ language, setLanguage }: HeaderProps) {
           <div className="lg:hidden py-4 border-t">
             <nav className="flex flex-col gap-4 mb-4">
               {t.nav.map((item, idx) => (
-                <a
-                  key={idx}
-                  href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="text-gray-700 hover:text-blue-700 transition-colors px-2 py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item}
-                </a>
-              ))}
+                  <a
+                    key={idx}
+                    href={`#${item.anchor}`}
+                    className="text-gray-700 hover:text-blue-700 transition-colors px-2 py-2"
+                    onClick={() => setMobileMenuOpen(false)}
+                    aria-label={item.label}
+                    tabIndex={0}
+                  >
+                    {item.label}
+                  </a>
+                ))}
             </nav>
             <div className="flex flex-col gap-3 px-2">
               <div className="flex items-center gap-2 bg-gray-100 rounded-lg p-1">
@@ -142,9 +163,11 @@ export function Header({ language, setLanguage }: HeaderProps) {
               </div>
               <a
                 href="tel:+998901234567"
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all shadow-md"
+                className="flex items-center justify-center gap-2 bg-linear-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all shadow-md"
+                aria-label="Позвонить в агентство"
+                role="button"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4" aria-hidden="true" />
                 {t.cta}
               </a>
             </div>

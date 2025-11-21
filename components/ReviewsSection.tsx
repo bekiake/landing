@@ -137,7 +137,7 @@ export function ReviewsSection({ language }: ReviewsSectionProps) {
                 </div>
 
                 {/* Review Text */}
-                <p className="text-gray-700 mb-4 italic">"{review.text}"</p>
+                  <p className="text-gray-900 mb-4 italic">"{review.text}"</p>
 
                 {/* Reviewer Info */}
                 <div className="flex items-center gap-3 pt-4 border-t border-gray-100">

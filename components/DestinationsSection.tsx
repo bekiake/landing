@@ -2,6 +2,7 @@ import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 import { BookingModal } from './BookingModal';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import Image from 'next/image';
 import { ScrollReveal, ParallaxSection } from './ScrollReveal';
 
 interface DestinationsSectionProps {
@@ -66,6 +67,11 @@ const destinations = [
 export function DestinationsSection({ language }: DestinationsSectionProps) {
   const t = translations[language];
   const [modalOpen, setModalOpen] = useState(false);
+  const altTexts = {
+    uz: (city: string, country: string) => `${city}, mashhur yo'nalish (${country})`,
+    ru: (city: string, country: string) => `${city}, популярное направление (${country})`,
+    en: (city: string, country: string) => `${city}, popular destination (${country})`,
+  };
 
   return (
     <>
@@ -78,7 +84,7 @@ export function DestinationsSection({ language }: DestinationsSectionProps) {
         <section id="aviabiletlar">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
-              <h2 className="text-center mb-12 text-gray-900">{t.title}</h2>
+              <h2 className="text-center mb-12 text-gray-900" tabIndex={0} aria-label={t.title}>{t.title}</h2>
             </ScrollReveal>
             
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -88,22 +94,29 @@ export function DestinationsSection({ language }: DestinationsSectionProps) {
                     className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer h-full"
                   >
                     <div className="relative h-48 overflow-hidden">
-                      <ImageWithFallback
+                      <Image
                         src={dest.image}
-                        alt={dest.city}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        alt={altTexts[language](dest.city, dest.country[language])}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        sizes="(max-width: 1024px) 100vw, 25vw"
+                        quality={80}
+                        loading="lazy"
+                        role="img"
+                        aria-label={altTexts[language](dest.city, dest.country[language])}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                     </div>
                     <div className="p-6">
                       <h3 className="mb-1 text-gray-900">{dest.city}</h3>
-                      <p className="text-gray-600 mb-4">{dest.country[language]}</p>
+                      <p className="text-gray-900 mb-4">{dest.country[language]}</p>
                       <button
                         className="flex items-center gap-2 text-blue-700 hover:gap-3 transition-all"
                         onClick={() => setModalOpen(true)}
+                        aria-label={t.cta}
                       >
                         {t.cta}
-                        <ArrowRight className="w-4 h-4" />
+                        <ArrowRight className="w-4 h-4" aria-hidden="true" />
                       </button>
                     </div>
                   </div>

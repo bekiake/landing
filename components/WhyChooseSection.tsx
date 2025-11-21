@@ -124,7 +124,7 @@ export function WhyChooseSection({ language }: WhyChooseSectionProps) {
                       <Icon className="w-7 h-7 text-white" />
                     </div>
                     <h3 className="mb-2 text-gray-900">{feature.title}</h3>
-                    <p className="text-gray-600">{feature.description}</p>
+                      <p className="text-gray-900">{feature.description}</p>
                   </div>
                 </ScrollReveal>
               );

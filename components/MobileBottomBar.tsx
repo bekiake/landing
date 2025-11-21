@@ -31,8 +31,10 @@ export function MobileBottomBar({ language }: MobileBottomBarProps) {
         <a
           href="tel:+998901234567"
           className="flex flex-col items-center gap-1 py-3 px-2 rounded-lg hover:bg-blue-50 transition-colors"
+          aria-label={t.call}
+          role="button"
         >
-          <Phone className="w-5 h-5 text-blue-700" />
+          <Phone className="w-5 h-5 text-blue-700" aria-hidden="true" />
           <span className="text-xs text-gray-700">{t.call}</span>
         </a>
         <a
@@ -40,9 +42,11 @@ export function MobileBottomBar({ language }: MobileBottomBarProps) {
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center gap-1 py-3 px-2 rounded-lg hover:bg-blue-50 transition-colors"
+          aria-label={t.telegram}
+          role="button"
         >
-          <Send className="w-5 h-5 text-blue-500" />
-          <span className="text-xs text-gray-700">{t.telegram}</span>
+          <Send className="w-5 h-5 text-blue-500" aria-hidden="true" />
+            <span className="text-xs text-gray-900">{t.telegram}</span>
         </a>
       </div>
     </div>
