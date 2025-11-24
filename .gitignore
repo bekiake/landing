@@ -30,5 +30,3 @@ dist/
 *.swp
 .idea/
 
-# Figma exports
-components/figma/
