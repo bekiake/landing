@@ -47,7 +47,8 @@ export function HeroSection({ language }: HeroSectionProps) {
           fill
           className="object-cover"
           priority
-          sizes="100vw"
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 80vw, 60vw"
+          quality={70}
         />
         <div className="absolute inset-0 bg-linear-to-b from-blue-900/50 via-blue-900/40 to-blue-900/60 bg-[rgba(0,0,0,0)]"></div>
       </div>

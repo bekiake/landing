@@ -14,9 +14,14 @@ export default function Document() {
         <meta property="og:locale" content="uz_UZ" />
         <meta property="og:site_name" content="Turizm Agentligi" />
         <meta name="twitter:card" content="summary_large_image" />
+        <link rel="preconnect" href="https://mc.yandex.ru" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWY8BB37LK"></script>
+        <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-VWY8BB37LK"></script>
         <script
+          defer
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -31,7 +36,7 @@ export default function Document() {
           }}
         />
         {/* Yandex Metrika */}
-          <script type="text/javascript" dangerouslySetInnerHTML={{
+          <script type="text/javascript" defer dangerouslySetInnerHTML={{
               __html: `
                 (function(m,e,t,r,i,k,a){
                   m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

@@ -78,8 +78,8 @@ export function AboutSection({ language }: AboutSectionProps) {
               alt={altTexts[language]}
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              quality={80}
+              sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              quality={70}
               loading="lazy"
               role="img"
               aria-label={altTexts[language]}
