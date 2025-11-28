@@ -14,7 +14,7 @@ export default function Document() {
         <meta property="og:locale" content="uz_UZ" />
         <meta property="og:site_name" content="Airtickett.uz – Turizm Agentligi" />
         <meta name="twitter:card" content="summary_large_image" />
-        
+        <meta name="yandex-verification" content="94d2066f5ade0969" />
         <link rel="preconnect" href="https://mc.yandex.ru" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
