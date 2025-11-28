@@ -10,8 +10,9 @@ interface UmrahSectionProps {
 
 const translations = {
   uz: {
-    title: 'Umra 2025 Paketlari',
-    subtitle: 'Muqaddas safar uchun barcha qulayliklar',
+    title: 'Umra va haj safarlari uchun ishonchli hamroh',
+    subtitle:
+      "Umra va haj safarlari siz uchun juda mas'uliyatli qaror ekanini bilamiz. airtickett.uz sizga tajribali hamkorlar bilan birga qulay parvoz, mehmonxona va transferlarni o'z ichiga olgan paketlarni taklif etadi.",
     package1: {
       name: 'Standart Paket',
       duration: '10 kun',

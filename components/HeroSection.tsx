@@ -9,9 +9,10 @@ interface HeroSectionProps {
 
 const translations = {
   uz: {
-    title1: 'Aviabiletlar ',
-    title2: 'eng yaxshi narxda',
-    subtitle: 'Yaqin parvozga arzon bilet qidiryapsizmi yoki ta\'tilni oldindan rejalashtiryapsizmi? Biz sizga eng yaxshi variantni tanlab beramiz - vaqt, narx va qulaylik bo\'yicha. Cheksiz qidiruvlar va shubhali saytlar yo\'q: faqat tasdiqlangan aviakompaniyalar, to\'g\'ridan-to\'g\'ri yoki qulay ulanish parvozlari.',
+    title1: 'Arzon aviabiletlar va sayohat xizmatlari – ',
+    title2: 'airtickett.uz',
+    subtitle:
+      "airtickett.uz O'zbekiston va xalqaro yo'nalishlarda arzon aviabiletlarni qidirish va bron qilish, shuningdek umra, haj va tur paketlarni taklif qiluvchi onlayn turizm servisi. Narxlarni solishtiring, eng qulay reysni tanlang va sayohatingizni bir necha daqiqada rejalashtiring.",
     callButton: "Qo'ng'iroq qilish"
   },
   ru: {
@@ -65,17 +66,17 @@ export function HeroSection({ language }: HeroSectionProps) {
           <p className="mb-10 text-lg text-gray-100 max-w-3xl mx-auto leading-relaxed">
             {t.subtitle}
           </p>
-          <div className="flex justify-center">
-            <a
-              href="tel:+998901234567"
-              className="inline-flex items-center justify-center gap-3 bg-white text-blue-700 px-10 py-4 rounded-full hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl"
-              aria-label={t.callButton}
-              role="button"
-            >
-              <Phone className="w-5 h-5" aria-hidden="true" />
-              {t.callButton}
-            </a>
-          </div>
+            <div className="flex justify-center">
+              <a
+                href="tel:+998901234567"
+                className="inline-flex items-center justify-center gap-3 bg-white text-blue-700 px-10 py-4 rounded-full hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl"
+                aria-label={t.callButton}
+                role="button"
+              >
+                <Phone className="w-5 h-5" aria-hidden="true" />
+                {t.callButton}
+              </a>
+            </div>
         </div>
       </div>
     </section>

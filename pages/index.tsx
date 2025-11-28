@@ -20,28 +20,28 @@ export default function Home() {
   // SEO uchun har tilga mos title va description
   const seo = {
     uz: {
-      title: 'Aviabilet, Umra, Haj, Tur paketlar | Turizm Agentligi',
-      description: 'Aviabilet, aviakassa, umra, haj va tur paketlar uchun eng yaxshi narxlar. Biz bilan sayohatingizni boshlang!'
+      title: 'Arzon aviabiletlar, Umra, Haj, Tur paketlar – airtickett.uz',
+      description: "airtickett.uz orqali O'zbekiston va xalqaro yo'nalishlarda arzon aviabiletlar, umra, haj va tur paketlarni onlayn qidiring va bron qiling."
     },
     ru: {
-      title: 'Авиабилеты, Умра, Хадж, Турпакеты | Туристическое агентство',
-      description: 'Авиабилеты, авиакасса, умра, хадж и турпакеты по лучшим ценам. Начните свое путешествие с нами!'
+      title: 'Дешевые авиабилеты, Умра, Хадж, турпакеты – airtickett.uz',
+      description: 'На airtickett.uz вы можете найти и забронировать дешевые авиабилеты, умра, хадж и турпакеты по выгодным ценам онлайн.'
     },
     en: {
-      title: 'Flight Tickets, Umrah, Hajj, Tour Packages | Travel Agency',
-      description: 'Best prices for flight tickets, umrah, hajj and tour packages. Start your journey with us!'
+      title: 'Cheap flight tickets, Umrah, Hajj, tour packages – airtickett.uz',
+      description: 'Find and book cheap flight tickets, umrah, hajj and tour packages worldwide on airtickett.uz.'
     }
   };
   return (
     <div className="min-h-screen bg-white">
       <Head>
         <link rel="canonical" href="https://airtickett.uz/" />
-        <link rel="alternate" href="https://airtickett.uz/" hrefLang="uz" />
-        <link rel="alternate" href="https://airtickett.uz/ru/" hrefLang="ru" />
-        <link rel="alternate" href="https://airtickett.uz/en/" hrefLang="en" />
         <title>{seo[language].title}</title>
         <meta name="description" content={seo[language].description} />
-        <meta name="keywords" content="aviabilet, aviakassa, umra, haj, tur paket, Uzbekistan, Туризм, Турпакет, авиабилеты, Умра, Хадж" />
+        <meta
+          name="keywords"
+          content="aviabilet, aviabiletlar, arzon aviabiletlar, aviakassa, umra safari, haj safari, tur paketlar, aviabilet Toshkent, авиабилеты Ташкент, дешевые авиабилеты, умра, хадж, турпакеты Узбекистан"
+        />
         <meta property="og:title" content={seo[language].title} />
         <meta property="og:description" content={seo[language].description} />
         <meta property="og:type" content="website" />

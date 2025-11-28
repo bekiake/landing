@@ -1,5 +1,6 @@
 import { Phone, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 
 interface HeaderProps {
@@ -12,6 +13,7 @@ const translations = {
     nav: [
       { label: 'Aviabiletlar', anchor: 'aviabiletlar' },
       { label: 'Umra turlari', anchor: 'umra-turlari' },
+      { label: 'Blog', anchor: 'blog' },
       { label: 'Biz haqimizda', anchor: 'biz-haqimizda' },
       { label: 'Aloqa', anchor: 'footer' }
     ],
@@ -21,6 +23,7 @@ const translations = {
     nav: [
       { label: 'Авиабилеты', anchor: 'aviabiletlar' },
       { label: 'Тур Умра', anchor: 'umra-turlari' },
+      { label: 'Блог', anchor: 'blog' },
       { label: 'О нас', anchor: 'biz-haqimizda' },
       { label: 'Контакты', anchor: 'footer' }
     ],
@@ -30,6 +33,7 @@ const translations = {
     nav: [
       { label: 'Airline Tickets', anchor: 'aviabiletlar' },
       { label: 'Umrah Tours', anchor: 'umra-turlari' },
+      { label: 'Blog', anchor: 'blog' },
       { label: 'About Us', anchor: 'biz-haqimizda' },
       { label: 'Contact', anchor: 'footer' }
     ],
@@ -40,6 +44,44 @@ const translations = {
 export function Header({ language, setLanguage }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = translations[language];
+  const router = useRouter();
+
+  const handleLanguageChange = (lang: 'uz' | 'ru' | 'en') => {
+    // Agar blog post sahifasidamiz va shu postning boshqa til versiyasi mavjud bo'lsa,
+    // mos slugga o'tamiz; aks holda faqat landing til state'ni almashtiramiz.
+    const path = router.asPath;
+
+    // Blog postlar uchun mapping: asosiy uz slug -> ru/en suffixlar
+    const blogMap: Record<string, { ru: string; en: string }> = {
+      '/blog/aviabiletni-eng-arzon-narxda-qachon-sotib-olish-kerak': {
+        ru: '/blog/aviabiletni-eng-arzon-narxda-qachon-sotib-olish-kerak.ru',
+        en: '/blog/aviabiletni-eng-arzon-narxda-qachon-sotib-olish-kerak.en',
+      },
+      '/blog/toshkent-istanbul-aviabilet-toliq-qollanma': {
+        ru: '/blog/toshkent-istanbul-aviabilet-toliq-qollanma.ru',
+        en: '/blog/toshkent-istanbul-aviabilet-toliq-qollanma.en',
+      },
+      '/blog/umra-safari-uchun-tayyorgarlik': {
+        ru: '/blog/umra-safari-uchun-tayyorgarlik.ru',
+        en: '/blog/umra-safari-uchun-tayyorgarlik.en',
+      },
+    };
+
+    // RU/EN versiyalaridan uz yoki boshqa tilga qaytishda asosiy uz slug'ga normalizatsiya
+    const normalizedPath = path
+      .replace('.ru', '')
+      .replace('.en', '');
+
+    if (normalizedPath in blogMap && (lang === 'ru' || lang === 'en')) {
+      const target = blogMap[normalizedPath][lang];
+      setLanguage(lang);
+      router.push(target);
+      return;
+    }
+
+    // Boshqa hollarda faqat til state'ni yangilaymiz
+    setLanguage(lang);
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
@@ -56,24 +98,28 @@ export function Header({ language, setLanguage }: HeaderProps) {
           </div>
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8" aria-label="Главная навигация">
-            {t.nav.map((item, idx) => (
-              <a
-                key={idx}
-                href={`#${item.anchor}`}
-                className="text-gray-700 hover:text-blue-700 transition-colors"
-                aria-label={item.label}
-                tabIndex={0}
-              >
-                {item.label}
-              </a>
-            ))}
+            {t.nav.map((item, idx) => {
+              const isBlog = item.anchor === 'blog';
+              const href = isBlog ? `/blog?lang=${language}` : `#${item.anchor}`;
+              return (
+                <a
+                  key={idx}
+                  href={href}
+                  className="text-gray-700 hover:text-blue-700 transition-colors"
+                  aria-label={item.label}
+                  tabIndex={0}
+                >
+                  {item.label}
+                </a>
+              );
+            })}
           </nav>
 
           {/* Language Switcher & CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <div className="flex items-center gap-2 bg-gray-100 rounded-lg p-1">
               <button
-                onClick={() => setLanguage('uz')}
+                onClick={() => handleLanguageChange('uz')}
                 className={`px-3 py-1.5 rounded-md transition-all ${
                   language === 'uz' ? 'bg-white shadow-sm' : 'text-gray-600'
                 }`}
@@ -81,7 +127,7 @@ export function Header({ language, setLanguage }: HeaderProps) {
                 UZ
               </button>
               <button
-                onClick={() => setLanguage('ru')}
+                onClick={() => handleLanguageChange('ru')}
                 className={`px-3 py-1.5 rounded-md transition-all ${
                   language === 'ru' ? 'bg-white shadow-sm' : 'text-gray-600'
                 }`}
@@ -89,7 +135,7 @@ export function Header({ language, setLanguage }: HeaderProps) {
                 RU
               </button>
               <button
-                onClick={() => setLanguage('en')}
+                onClick={() => handleLanguageChange('en')}
                 className={`px-3 py-1.5 rounded-md transition-all ${
                   language === 'en' ? 'bg-white shadow-sm' : 'text-gray-600'
                 }`}
@@ -121,10 +167,13 @@ export function Header({ language, setLanguage }: HeaderProps) {
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t">
             <nav className="flex flex-col gap-4 mb-4">
-              {t.nav.map((item, idx) => (
+              {t.nav.map((item, idx) => {
+                const isBlog = item.anchor === 'blog';
+                const href = isBlog ? `/blog?lang=${language}` : `#${item.anchor}`;
+                return (
                   <a
                     key={idx}
-                    href={`#${item.anchor}`}
+                    href={href}
                     className="text-gray-700 hover:text-blue-700 transition-colors px-2 py-2"
                     onClick={() => setMobileMenuOpen(false)}
                     aria-label={item.label}
@@ -132,12 +181,13 @@ export function Header({ language, setLanguage }: HeaderProps) {
                   >
                     {item.label}
                   </a>
-                ))}
+                );
+              })}
             </nav>
             <div className="flex flex-col gap-3 px-2">
               <div className="flex items-center gap-2 bg-gray-100 rounded-lg p-1">
                 <button
-                  onClick={() => setLanguage('uz')}
+                  onClick={() => handleLanguageChange('uz')}
                   className={`flex-1 py-2 rounded-md transition-all ${
                     language === 'uz' ? 'bg-white shadow-sm' : 'text-gray-600'
                   }`}
@@ -145,7 +195,7 @@ export function Header({ language, setLanguage }: HeaderProps) {
                   UZ
                 </button>
                 <button
-                  onClick={() => setLanguage('ru')}
+                  onClick={() => handleLanguageChange('ru')}
                   className={`flex-1 py-2 rounded-md transition-all ${
                     language === 'ru' ? 'bg-white shadow-sm' : 'text-gray-600'
                   }`}
@@ -153,7 +203,7 @@ export function Header({ language, setLanguage }: HeaderProps) {
                   RU
                 </button>
                 <button
-                  onClick={() => setLanguage('en')}
+                  onClick={() => handleLanguageChange('en')}
                   className={`flex-1 py-2 rounded-md transition-all ${
                     language === 'en' ? 'bg-white shadow-sm' : 'text-gray-600'
                   }`}

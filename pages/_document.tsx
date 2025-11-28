@@ -12,8 +12,9 @@ export default function Document() {
         <link rel="manifest" href="/manifest.json" />
         <link rel="canonical" href="https://airtickett.uz/" />
         <meta property="og:locale" content="uz_UZ" />
-        <meta property="og:site_name" content="Turizm Agentligi" />
+        <meta property="og:site_name" content="Airtickett.uz – Turizm Agentligi" />
         <meta name="twitter:card" content="summary_large_image" />
+        
         <link rel="preconnect" href="https://mc.yandex.ru" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

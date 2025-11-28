@@ -11,8 +11,8 @@ interface DestinationsSectionProps {
 
 const translations = {
   uz: {
-    title: 'Mashhur yo\'nalishlar',
-    cta: 'Batafsil'
+    title: "Mashhur aviabilet yo'nalishlari",
+    cta: 'Aviabilet topish'
   },
   ru: {
     title: 'Популярные направления',
@@ -92,6 +92,7 @@ export function DestinationsSection({ language }: DestinationsSectionProps) {
                 <ScrollReveal key={idx}>
                   <div
                     className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer h-full"
+                    onClick={() => setModalOpen(true)}
                   >
                     <div className="relative h-48 overflow-hidden">
                       <Image

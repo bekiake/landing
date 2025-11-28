@@ -8,31 +8,32 @@ interface FAQSectionProps {
 
 const translations = {
   uz: {
-    title: 'Ko\'p so\'raladigan savollar',
+    title: "Ko'p so'raladigan savollar",
     faqs: [
       {
-        question: 'Aviabilet qanday bron qilinadi?',
-        answer: 'Bizga telefon orqali yoki WhatsApp/Telegram orqali bog\'lanasiz. Mutaxassislarimiz sizga yo\'nalish va sana bo\'yicha eng yaxshi variantlarni taklif qiladi. To\'lovni amalga oshirganingizdan so\'ng, elektron chipta sizning emailingizga yuboriladi.'
+        question: "Elektron aviabilet nima va uni aeroportda qanday ko'rsataman?",
+        answer:
+          "Elektron aviabilet bu sizning parvozingiz haqidagi barcha ma'lumotlar ko'rsatilgan raqamli chipta. Xariddan so'ng aviakompaniya sizga e-mail yoki messenjerdan tasdiqlovchi hujjat yuboradi. Aeroportga borganda pasportingiz bilan birga telefoningizdan yoki chop etilgan variantni ko'rsatishingiz kifoya."
       },
       {
-        question: 'Qaysi yo\'nalishlar mavjud?',
-        answer: 'Biz dunyoning barcha yo\'nalishlari bo\'yicha xizmat ko\'rsatamiz. Eng mashhur yo\'nalishlar: Istanbul, Dubai, Jeddah, Moskva, Almaty, Sankt-Peterburg va boshqalar.'
+        question: 'Aviabiletni qaytarish yoki sanasini almashtirish mumkinmi?',
+        answer:
+          "Qaytarish va o'zgartirish shartlari tanlagan tarif va aviakompaniyaga bog'liq. Ba'zi arzon tariflar qaytarilmaydi, lekin sanani ma'lum to'lov evaziga o'zgartirish mumkin bo'ladi. airtickett.uz orqali xarid qilganingizda, bizning mutaxassislarimiz sizga aynan sizning chiptaingiz bo'yicha batafsil ma'lumot berishadi."
       },
       {
-        question: 'Umra paketlar nimalarni o\'z ichiga oladi?',
-        answer: 'Umra paketlarimiz: parvoz (borish-qaytish), mehmonxona (2-3 kunlik Makkada, 2-3 kunlik Madinada), transfer xizmati, Umra vizasi, yo\'lboshchi xizmati va zaruriy sug\'urta. Premium va VIP paketlarda qo\'shimcha qulayliklar mavjud.'
+        question: 'Onlayn to\'lov xavfsizmi?',
+        answer:
+          "Biz faqat sertifikatlangan to'lov tizimlaridan foydalanamiz va barcha ma'lumotlar shifrlangan kanal orqali uzatiladi. Kartangiz ma'lumotlari serverlarda saqlanmaydi, to'lov tugaganidan so'ng xavfsiz tarzda yakunlanadi."
       },
       {
-        question: 'To\'lov qanday amalga oshiriladi?',
-        answer: 'Naqd pul (ofisimizda), bank o\'tkazmasi yoki plastik karta orqali to\'lash mumkin. To\'liq to\'lov yoki bo\'lib-bo\'lib to\'lash imkoniyati mavjud.'
+        question: 'Bolalar bilan uchishda qanday chegirmalar mavjud?',
+        answer:
+          "Aksariyat aviakompaniyalarda bolalar uchun alohida tariflar va chegirmalar bor. Bola yoshi, yo'nalish va aviakompaniyaga qarab, chegirma miqdori farq qiladi. Qidiruv natijalarida ko'p hollarda bolalar uchun narxlar alohida ko'rsatiladi yoki qo'llab-quvvatlovchi xizmatimizdan aniqlab olishingiz mumkin."
       },
       {
-        question: 'Chipta bekor qilish mumkinmi?',
-        answer: 'Ha, ammo bekor qilish shartlari aviakompaniya va chipta turига bog\'liq. Ba\'zi chipta turlari bekor qilinmaydi yoki jarimaga ega. Batafsil ma\'lumot uchun mutaxassislarimizga murojaat qiling.'
-      },
-      {
-        question: 'Qo\'shimcha xizmatlar bormi?',
-        answer: 'Ha, biz mehmonxona bron qilish, viza rasmiylashtirish, transfer, sayohat sug\'urtasi va boshqa qo\'shimcha xizmatlar taklif qilamiz.'
+        question: 'Umra va haj safarlariga qanday hujjatlar kerak?',
+        answer:
+          "Amaldagi xorijga chiqish pasporti, biometrik surat, tibbiy ma'lumotnomalar va viza rasmiylashtirish uchun zarur bo'lgan boshqa hujjatlar talab qilinadi. Talablar yil sayin o'zgarishi mumkin, shuning uchun safaringizni rejalashtirishdan oldin airtickett.uz maslahatchilaridan yangilangan ro'yxatni so'rashingizni tavsiya qilamiz."
       }
     ]
   },

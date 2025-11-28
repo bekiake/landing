@@ -7,31 +7,36 @@ interface WhyChooseSectionProps {
 
 const translations = {
   uz: {
-    title: "Nima uchun Airticket'ni tanlash kerak?",
+    title: "Nega aviabiletni aynan airtickett.uz orqali sotib olish kerak?",
     features: [
       {
-        title: '6 yillik tajriba',
-        description: 'Sayohat sohasida ishonarli hamkor'
+        title: 'Arzon narxlar va aksiyalar',
+        description:
+          "Turli aviakompaniyalar takliflarini bir joyda solishtirib, eng qulay va arzon aviabiletlarni topishingiz mumkin."
       },
       {
-        title: '24/7 yordam',
-        description: 'Doimo aloqada va yordamga tayyor'
+        title: 'Tez va qulay bron qilish',
+        description:
+          "Qidirish, tanlash va to'lov jarayoni bir necha oddiy qadamdan iborat. Keraksiz qo'ng'iroqlarsiz onlayn bron qiling."
       },
       {
-        title: '3,000+ mijozlar',
-        description: 'Bizga ishongan qoniqgan mijozlar'
+        title: 'Tajribali turizm maslahatchilari',
+        description:
+          'Umra, haj va tur paketlar bo‘yicha savollaringizga tajribali mutaxassislar javob beradi.'
       },
       {
-        title: 'Eng yaxshi narx kafolati',
-        description: 'Bozordagi eng arzon narxlar'
+        title: 'Xavfsiz onlayn to‘lov',
+        description:
+          'UZCARD, HUMO, Visa va MasterCard orqali himoyalangan to‘lov tizimi orqali chipta xarid qilasiz.'
       },
       {
-        title: '100% ishonchli',
-        description: 'Rasmiy litsenziya va guvohnomalar'
+        title: '24/7 qo‘llab-quvvatlovchi xizmat',
+        description:
+          'Telegram, telefon va boshqa kanallar orqali kecha-kunduz aloqa qilishingiz mumkin.'
       },
       {
-        title: 'Tezkor bron',
-        description: 'Bir necha daqiqada chipta bron qilish'
+        title: 'Ishonchli hamkorlar va litsenziyalar',
+        description: 'Rasmiy litsenziyaga ega ishonchli turizm hamkorlari bilan ishlaymiz.'
       }
     ]
   },
