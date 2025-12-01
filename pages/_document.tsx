@@ -4,11 +4,12 @@ export default function Document() {
   return (
     <Html lang="uz">
       <Head>
-        <meta name="theme-color" content="#1e40af" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="theme-color" content="#1e40af" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="canonical" href="https://airtickett.uz/" />
         <meta property="og:locale" content="uz_UZ" />
