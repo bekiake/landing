@@ -66,7 +66,11 @@ export default function Home({ initialLanguage = "uz" }: HomeProps) {
         <meta property="og:title" content={seo[language].title} />
         <meta property="og:description" content={seo[language].description} />
         <meta property="og:type" content="website" />
-        {/* Schema.org strukturalangan ma’lumotlar */}
+        <meta property="og:url" content={`https://airtickett.uz${language === 'uz' ? '' : `/${language}`}`} />
+        <meta property="og:image" content="https://airtickett.uz/logo.png" />
+        <meta name="twitter:title" content={seo[language].title} />
+        <meta name="twitter:description" content={seo[language].description} />
+        {/* Schema.org strukturalangan ma'lumotlar */}
         {/* BreadcrumbList schema.org */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
