@@ -1,13 +1,135 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+>
+  <!-- Asosiy landing (til state orqali o'zgaradi) -->
   <url>
     <loc>https://airtickett.uz/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Blog ro'yxat sahifasi (default uz) -->
   <url>
     <loc>https://airtickett.uz/blog</loc>
     <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Blog ro'yxati RU -->
+  <url>
+    <loc>https://airtickett.uz/blog?lang=ru</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Blog ro'yxati EN -->
+  <url>
+    <loc>https://airtickett.uz/blog?lang=en</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog postlar (6 ta post * 3 til) -->
+  <!-- travel-tips -->
+  <url>
+    <loc>https://airtickett.uz/blog/travel-tips</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- kerakli boshqa sahifalar -->
+  <url>
+    <loc>https://airtickett.uz/blog/travel-tips?lang=ru</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://airtickett.uz/blog/travel-tips?lang=en</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- cheap-flights -->
+  <url>
+    <loc>https://airtickett.uz/blog/cheap-flights</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://airtickett.uz/blog/cheap-flights?lang=ru</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://airtickett.uz/blog/cheap-flights?lang=en</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- travel-budget -->
+  <url>
+    <loc>https://airtickett.uz/blog/travel-budget</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://airtickett.uz/blog/travel-budget?lang=ru</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://airtickett.uz/blog/travel-budget?lang=en</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- visa-guide -->
+  <url>
+    <loc>https://airtickett.uz/blog/visa-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://airtickett.uz/blog/visa-guide?lang=ru</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://airtickett.uz/blog/visa-guide?lang=en</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- packing-tips -->
+  <url>
+    <loc>https://airtickett.uz/blog/packing-tips</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://airtickett.uz/blog/packing-tips?lang=ru</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://airtickett.uz/blog/packing-tips?lang=en</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- umrah-preparation -->
+  <url>
+    <loc>https://airtickett.uz/blog/umrah-preparation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://airtickett.uz/blog/umrah-preparation?lang=ru</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://airtickett.uz/blog/umrah-preparation?lang=en</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 404 va 500 odatda sitemapga kiritilmaydi, shuning uchun qo'shmadik -->
 </urlset>
