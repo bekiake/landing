@@ -47,40 +47,18 @@ export function Header({ language, setLanguage }: HeaderProps) {
   const router = useRouter();
 
   const handleLanguageChange = (lang: 'uz' | 'ru' | 'en') => {
-    // Agar blog post sahifasidamiz va shu postning boshqa til versiyasi mavjud bo'lsa,
-    // mos slugga o'tamiz; aks holda faqat landing til state'ni almashtiramiz.
-    const path = router.asPath;
-
-    // Blog postlar uchun mapping: asosiy uz slug -> ru/en suffixlar
-    const blogMap: Record<string, { ru: string; en: string }> = {
-      '/blog/aviabiletni-eng-arzon-narxda-qachon-sotib-olish-kerak': {
-        ru: '/blog/aviabiletni-eng-arzon-narxda-qachon-sotib-olish-kerak.ru',
-        en: '/blog/aviabiletni-eng-arzon-narxda-qachon-sotib-olish-kerak.en',
-      },
-      '/blog/toshkent-istanbul-aviabilet-toliq-qollanma': {
-        ru: '/blog/toshkent-istanbul-aviabilet-toliq-qollanma.ru',
-        en: '/blog/toshkent-istanbul-aviabilet-toliq-qollanma.en',
-      },
-      '/blog/umra-safari-uchun-tayyorgarlik': {
-        ru: '/blog/umra-safari-uchun-tayyorgarlik.ru',
-        en: '/blog/umra-safari-uchun-tayyorgarlik.en',
-      },
-    };
-
-    // RU/EN versiyalaridan uz yoki boshqa tilga qaytishda asosiy uz slug'ga normalizatsiya
-    const normalizedPath = path
-      .replace('.ru', '')
-      .replace('.en', '');
-
-    if (normalizedPath in blogMap && (lang === 'ru' || lang === 'en')) {
-      const target = blogMap[normalizedPath][lang];
-      setLanguage(lang);
-      router.push(target);
-      return;
-    }
-
-    // Boshqa hollarda faqat til state'ni yangilaymiz
+    // Asosiy sahifada tilni o'zgartirganda URL path-ni ham almashtiramiz
+    // uz -> '/', ru -> '/ru', en -> '/en'
     setLanguage(lang);
+    if (router.pathname === '/' || router.pathname === '/ru' || router.pathname === '/en') {
+      if (lang === 'uz') {
+        router.push('/');
+      } else if (lang === 'ru') {
+        router.push('/ru');
+      } else if (lang === 'en') {
+        router.push('/en');
+      }
+    }
   };
 
   return (
