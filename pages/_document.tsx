@@ -73,8 +73,9 @@ export default function Document() {
                   clickmap:true,
                   trackLinks:true,
                   accurateTrackBounce:true,
-                  webvisor:false,
-                  trackSession:false
+                  webvisor:true,
+                  trackSession:true,
+                  ecommerce:"dataLayer"
               });
             `,
           }}
