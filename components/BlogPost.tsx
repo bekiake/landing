@@ -11,7 +11,7 @@ const blogPosts = {
   'travel-tips': {
     uz: {
       title: 'Sayohat uchun 10 ta foydali maslahat',
-      date: '15 Noyabr 2024',
+      date: '15 Noyabr 2025',
       readTime: '5',
       category: 'Maslahatlar',
       image: '/travel-tips.jpg',
@@ -53,7 +53,7 @@ const blogPosts = {
     },
     ru: {
       title: '10 полезных советов для путешествий',
-      date: '15 Ноябрь 2024',
+      date: '15 Ноябрь 2025',
       readTime: '5',
       category: 'Советы',
       image:
@@ -96,7 +96,7 @@ const blogPosts = {
     },
     en: {
       title: '10 Useful Travel Tips',
-      date: 'November 15, 2024',
+      date: 'November 15, 2025',
       readTime: '5',
       category: 'Tips',
       image:
@@ -141,7 +141,7 @@ const blogPosts = {
   'cheap-flights': {
     uz: {
       title: 'Aviabilet qanday qilib arzon narxda olish mumkin?',
-      date: '10 Noyabr 2024',
+      date: '10 Noyabr 2025',
       readTime: '7',
       category: 'Aviabiletlar',
       image: '/airticket.jpg',
@@ -185,7 +185,7 @@ const blogPosts = {
     },
     ru: {
       title: 'Как купить авиабилеты дешево?',
-      date: '10 Ноябрь 2024',
+      date: '10 Ноябрь 2025',
       readTime: '7',
       category: 'Авиабилеты',
       image: '/airticket.jpg',
@@ -229,7 +229,7 @@ const blogPosts = {
     },
     en: {
       title: 'How to Buy Cheap Flight Tickets?',
-      date: 'November 10, 2024',
+      date: 'November 10, 2025',
       readTime: '7',
       category: 'Flights',
       image:
@@ -276,7 +276,7 @@ const blogPosts = {
   'travel-budget': {
     uz: {
       title: 'Sayohat byudjeti: Pulni qanday tejash mumkin',
-      date: '5 Noyabr 2024',
+      date: '5 Noyabr 2025',
       readTime: '6',
       category: 'Moliya',
       image:
@@ -325,7 +325,7 @@ const blogPosts = {
     },
     ru: {
       title: 'Бюджет путешествия: Как сэкономить деньги',
-      date: '5 Ноябрь 2024',
+      date: '5 Ноябрь 2025',
       readTime: '6',
       category: 'Финансы',
       image:
@@ -374,7 +374,7 @@ const blogPosts = {
     },
     en: {
       title: 'Travel Budget: How to Save Money',
-      date: 'November 5, 2024',
+      date: 'November 5, 2025',
       readTime: '6',
       category: 'Finance',
       image:
@@ -424,8 +424,8 @@ const blogPosts = {
   },
     'visa-guide': {
     uz: {
-      title: 'Viza olish: To‘liq qo‘llanma',
-      date: '1 Noyabr 2024',
+      title: "Viza olish: To'liq qo'llanma",
+      date: '1 Noyabr 2025',
       readTime: '8',
       category: 'Viza',
       image: '/visa-application-document.jpg',
@@ -472,7 +472,7 @@ const blogPosts = {
     },
     ru: {
       title: 'Получение визы: Полное руководство',
-      date: '1 Ноябрь 2024',
+      date: '1 Ноябрь 2025',
       readTime: '8',
       category: 'Виза',
       image: "/visa-application-document.jpg",
@@ -519,7 +519,7 @@ const blogPosts = {
     },
     en: {
       title: 'Getting a Visa: Complete Guide',
-      date: 'November 1, 2024',
+      date: 'November 1, 2025',
       readTime: '8',
       category: 'Visa',
       image: "/visa-application-document.jpg",
@@ -566,8 +566,8 @@ const blogPosts = {
   },
   'packing-tips': {
     uz: {
-      title: "Bagajni to‘g‘ri yig‘ish: Nima olib borish kerak?",
-      date: '28 Oktyabr 2024',
+      title: "Bagajni to'g'ri yig'ish: Nima olib borish kerak?",
+      date: '28 Oktyabr 2025',
       readTime: '5',
       category: 'Maslahatlar',
       image: '/travel-concept-with-open-luggage.jpg',
@@ -594,7 +594,7 @@ const blogPosts = {
     },
     ru: {
       title: 'Правильная упаковка багажа: Что брать с собой?',
-      date: '28 Октябрь 2024',
+      date: '28 Октябрь 2025',
       readTime: '5',
       category: 'Советы',
       image:
@@ -622,7 +622,7 @@ const blogPosts = {
     },
     en: {
       title: 'Packing Luggage Right: What to Bring?',
-      date: 'October 28, 2024',
+      date: 'October 28, 2025',
       readTime: '5',
       category: 'Tips',
       image:
@@ -651,8 +651,8 @@ const blogPosts = {
   },
   'umrah-preparation': {
     uz: {
-      title: 'Umra safari: To‘liq tayyorgarlik',
-      date: '25 Oktyabr 2024',
+      title: "Umra safari: To'liq tayyorgarlik",
+      date: '25 Oktyabr 2025',
       readTime: '10',
       category: 'Umra',
       image:
@@ -685,7 +685,7 @@ const blogPosts = {
     },
     ru: {
       title: 'Умра: подготовка к паломничеству',
-      date: '25 Октябрь 2024',
+      date: '25 Октябрь 2025',
       readTime: '10',
       category: 'Умра',
       image:
@@ -718,7 +718,7 @@ const blogPosts = {
     },
     en: {
       title: 'Umrah Journey: Preparation Guide',
-      date: 'October 25, 2024',
+      date: 'October 25, 2025',
       readTime: '10',
       category: 'Umrah',
       image:

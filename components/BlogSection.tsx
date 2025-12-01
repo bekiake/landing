@@ -19,7 +19,7 @@ const translations = {
         title: 'Sayohat uchun 10 ta foydali maslahat',
         excerpt:
           "Sayohatingizni qulayroq va tejamkor qilish uchun eng muhim maslahatlar. Bilet olishdan tortib, bagaj yig'ishgacha bo'lgan barcha bosqichlar.",
-        date: '15 Noyabr 2024',
+        date: '15 Noyabr 2025',
         readTime: '5',
         category: 'Maslahatlar',
         image: '/travel-tips.jpg',
@@ -29,7 +29,7 @@ const translations = {
         title: 'Aviabilet qanday qilib arzon narxda olish mumkin?',
         excerpt:
           "Aviabiletlarni tejamkor narxlarda sotib olish sirlari. Qaysi kunlarda va qaysi vaqtda biletlar arzonroq bo'ladi.",
-        date: '10 Noyabr 2024',
+        date: '10 Noyabr 2025',
         readTime: '7',
         category: 'Aviabiletlar',
         image: '/airticket.jpg',
@@ -39,7 +39,7 @@ const translations = {
         title: 'Sayohat byudjeti: Pulni qanday tejash mumkin',
         excerpt:
           "Sayohat davomida pulni tejash bo'yicha amaliy maslahatlar. Transport, turar joy va ovqatlanish xarajatlarini qisqartirish yo'llari.",
-        date: '5 Noyabr 2024',
+        date: '5 Noyabr 2025',
         readTime: '6',
         category: 'Moliya',
         image:
@@ -50,7 +50,7 @@ const translations = {
         title: "Viza olish: To'liq qo'llanma",
         excerpt:
           'Vizani to\'g\'ri va tezkor rasmiylashtirish bo\'yicha batafsil ko\'rsatmalar. Kerakli hujjatlar va umumiy xatolar.',
-        date: '1 Noyabr 2024',
+        date: '1 Noyabr 2025',
         readTime: '8',
         category: 'Viza',
         image: '/visa-application-document.jpg',
@@ -60,7 +60,7 @@ const translations = {
         title: "Bagajni to'g'ri yig'ish: Nima olib borish kerak?",
         excerpt:
           'Har qanday sayohat uchun ideal bagaj yig\'ish bo\'yicha maslahatlar. Nima kerak, nima keraksiz va qanday qilib kompaktroq yig\'ish mumkin.',
-        date: '28 Oktyabr 2024',
+        date: '28 Oktyabr 2025',
         readTime: '5',
         category: 'Maslahatlar',
         image:
@@ -71,7 +71,7 @@ const translations = {
         title: "Umra safari: To'liq tayyorgarlik",
         excerpt:
           'Muqaddas ziyorat uchun to\'liq tayyorgarlik ko\'rish bo\'yicha yo\'riqnoma. Ruhiy va jismoniy tayyorgarlik, kerakli narsalar ro\'yxati.',
-        date: '25 Oktyabr 2024',
+        date: '25 Oktyabr 2025',
         readTime: '10',
         category: 'Umra',
         image: '/umra-safari-2.jpg'
@@ -89,7 +89,7 @@ const translations = {
         title: '10 полезных советов для путешествий',
         excerpt:
           'Самые важные советы, чтобы сделать ваше путешествие комфортнее и экономичнее. Все этапы от покупки билета до упаковки багажа.',
-        date: '15 Ноябрь 2024',
+        date: '15 Ноябрь 2025',
         readTime: '5',
         category: 'Советы',
         image:'/travel-tips.jpg',
@@ -99,7 +99,7 @@ const translations = {
         title: 'Как купить авиабилеты дешево?',
         excerpt:
           'Секреты покупки авиабилетов по выгодным ценам. В какие дни и время билеты дешевле.',
-        date: '10 Ноябрь 2024',
+        date: '10 Ноябрь 2025',
         readTime: '7',
         category: 'Авиабилеты',
         image:'/airticket.jpg',
@@ -109,7 +109,7 @@ const translations = {
         title: 'Бюджет путешествия: Как сэкономить деньги',
         excerpt:
           'Практические советы по экономии денег во время путешествия. Способы сократить расходы на транспорт, жилье и питание.',
-        date: '5 Ноябрь 2024',
+        date: '5 Ноябрь 2025',
         readTime: '6',
         category: 'Финансы',
         image:
@@ -120,7 +120,7 @@ const translations = {
         title: 'Получение визы: Полное руководство',
         excerpt:
           'Подробная инструкция по правильному и быстрому оформлению визы. Необходимые документы и частые ошибки.',
-        date: '1 Ноябрь 2024',
+        date: '1 Ноябрь 2025',
         readTime: '8',
         category: 'Виза',
         image:
@@ -131,7 +131,7 @@ const translations = {
         title: 'Правильная упаковка багажа: Что брать с собой?',
         excerpt:
           'Советы по идеальной упаковке багажа dla lyubogo puteshestviya. Chto nuzhno, chto lishnee i kak upakovat kompaktnee.',
-        date: '28 Октябрь 2024',
+        date: '28 Октябрь 2025',
         readTime: '5',
         category: 'Советы',
         image:
@@ -142,7 +142,7 @@ const translations = {
         title: 'Умра: Полная подготовка',
         excerpt:
           'Руководство по полной подготовке к священному паломничеству. Духовная и физическая подготовка, список необходимого.',
-        date: '25 Октябрь 2024',
+        date: '25 Октябрь 2025',
         readTime: '10',
         category: 'Умра',
         image:
@@ -161,7 +161,7 @@ const translations = {
         title: '10 Useful Travel Tips',
         excerpt:
           'The most important tips to make your trip more comfortable and economical. All stages from buying a ticket to packing your luggage.',
-        date: 'November 15, 2024',
+        date: 'November 15, 2025',
         readTime: '5',
         category: 'Tips',
         image:
@@ -172,7 +172,7 @@ const translations = {
         title: 'How to Buy Cheap Flight Tickets?',
         excerpt:
           'Secrets of buying airline tickets at affordable prices. On which days and times tickets are cheaper.',
-        date: 'November 10, 2024',
+        date: 'November 10, 2025',
         readTime: '7',
         category: 'Flights',
         image:
@@ -183,7 +183,7 @@ const translations = {
         title: 'Travel Budget: How to Save Money',
         excerpt:
           'Practical tips on saving money while traveling. Ways to reduce costs on transport, accommodation and food.',
-        date: 'November 5, 2024',
+        date: 'November 5, 2025',
         readTime: '6',
         category: 'Finance',
         image:
@@ -194,7 +194,7 @@ const translations = {
         title: 'Getting a Visa: Complete Guide',
         excerpt:
           'Detailed instructions for proper and fast visa processing. Required documents and common mistakes.',
-        date: 'November 1, 2024',
+        date: 'November 1, 2025',
         readTime: '8',
         category: 'Visa',
         image:
@@ -205,7 +205,7 @@ const translations = {
         title: 'Packing Luggage Right: What to Bring?',
         excerpt:
           'Tips for perfect luggage packing for any trip. What you need, what is unnecessary and how to pack more compactly.',
-        date: 'October 28, 2024',
+        date: 'October 28, 2025',
         readTime: '5',
         category: 'Tips',
         image:
@@ -216,7 +216,7 @@ const translations = {
         title: 'Umrah Journey: Complete Preparation',
         excerpt:
           'A guide to complete preparation for the sacred pilgrimage. Spiritual and physical preparation, list of essentials.',
-        date: 'October 25, 2024',
+        date: 'October 25, 2025',
         readTime: '10',
         category: 'Umrah',
         image:

@@ -8,6 +8,7 @@ Allow: /
 Allow: /uz/
 Allow: /ru/
 Allow: /en/
+Allow: /blog/
 
 # Block system/internal folders (security + SEO)
 Disallow: /admin/

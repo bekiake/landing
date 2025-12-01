@@ -2,9 +2,9 @@
 
 module.exports = {
   siteUrl: "https://airtickett.uz",
-  generateRobotsTxt: true,          // robots.txt avtomatik generatsiya
+  generateRobotsTxt: false,         // robots.txt qo'lda boshqariladi (public/robots.txt)
   sitemapSize: 5000,                // katta saytlar uchun optimal
-  changefreq: "daily",              // Google uchun – har kuni yangilanadi
+  changefreq: "weekly",             // Haftalik yangilanish (blog uchun optimal)
   priority: 0.7,                    // umumiy prioritet
   trailingSlash: false,             // URL'larda slash qo'shmaydi
   autoLastmod: true,                // lastmod sana avtomatik qo‘yiladi
