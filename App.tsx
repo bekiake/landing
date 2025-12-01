@@ -19,7 +19,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header language={language} setLanguage={setLanguage} />
+      <Header language={language} />
       <main>
         <HeroSection language={language} />
         <StatsSection language={language} />
