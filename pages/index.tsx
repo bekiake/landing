@@ -15,8 +15,12 @@ import { AboutSection } from "../components/AboutSection";
 import { Footer } from "../components/Footer";
 import { MobileBottomBar } from "../components/MobileBottomBar";
 
-export default function Home() {
-  const [language, setLanguage] = useState<"uz" | "ru" | "en">("uz");
+interface HomeProps {
+  initialLanguage?: "uz" | "ru" | "en";
+}
+
+export default function Home({ initialLanguage = "uz" }: HomeProps) {
+  const [language, setLanguage] = useState<"uz" | "ru" | "en">(initialLanguage);
   // SEO uchun har tilga mos title va description
   const seo = {
     uz: {

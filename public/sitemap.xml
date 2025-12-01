@@ -2,9 +2,19 @@
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 >
-  <!-- Asosiy landing (til state orqali o'zgaradi) -->
+  <!-- Asosiy landing sahifalar (path-based tillar) -->
   <url>
     <loc>https://airtickett.uz/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://airtickett.uz/ru</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://airtickett.uz/en</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
