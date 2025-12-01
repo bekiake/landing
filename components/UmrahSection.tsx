@@ -147,6 +147,8 @@ export function UmrahSection({ language }: UmrahSectionProps) {
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1720549973451-018d3623b55a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrYWFiYSUyMG1lY2NhfGVufDF8fHx8MTc2MzcxMDM4NXww&ixlib=rb-4.1.0&q=80&w=1080"
                 alt="Kaaba"
+                width={1080}
+                height={400}
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent"></div>

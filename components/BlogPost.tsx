@@ -57,7 +57,7 @@ const blogPosts = {
       readTime: '5',
       category: 'Советы',
       image:
-        'https://images.unsplash.com/photo-1764289556130-34f74024b2e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjB0aXBzJTIwam91cm5leXxlbnwxfHx8fDE3NjQzMjEzMTF8MA&ixlib=rb-4.1.0&q=80&w=1080',
+        '/travel-tips.jpg',
       content: `
         <p>Путешествие - это одно из самых приятных переживаний в нашей жизни. Однако без хорошей подготовки оно может превратиться в череду трудностей. Вот 10 важных советов для вас:</p>
 
@@ -100,7 +100,7 @@ const blogPosts = {
       readTime: '5',
       category: 'Tips',
       image:
-        'https://images.unsplash.com/photo-1764289556130-34f74024b2e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjB0aXBzJTIwam91cm5leXxlbnwxfHx8fDE3NjQzMjEzMTF8MA&ixlib=rb-4.1.0&q=80&w=1080',
+        '/travel-tips.jpg',
       content: `
         <p>Travel is one of the most enjoyable experiences in our lives. However, without proper preparation, it can turn into a series of difficulties. Here are 10 important tips for you:</p>
 
@@ -188,8 +188,7 @@ const blogPosts = {
       date: '10 Ноябрь 2024',
       readTime: '7',
       category: 'Авиабилеты',
-      image:
-        'https://images.unsplash.com/photo-1594671515324-ea48fea744d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXNzcG9ydCUyMGJvYXJkaW5nJTIwZmxpZ2h0fGVufDF8fHx8MTc2NDMyMTMxMnww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/airticket.jpg',
       content: `
         <p>Авиабилеты составляют основную часть расходов на путешествие. Но с правильной стратегией вы можете существенно сэкономить. Вот профессиональные советы:</p>
 
@@ -234,7 +233,7 @@ const blogPosts = {
       readTime: '7',
       category: 'Flights',
       image:
-        'https://images.unsplash.com/photo-1594671515324-ea48fea744d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXNzcG9ydCUyMGJvYXJkaW5nJTIwZmxpZ2h0fGVufDF8fHx8MTc2NDMyMTMxMnww&ixlib=rb-4.1.0&q=80&w=1080',
+        '/airticket.jpg',
       content: `
         <p>Airfare makes up the major part of travel expenses. But with the right strategy, you can save significantly. Here are some professional tips:</p>
 
@@ -476,8 +475,7 @@ const blogPosts = {
       date: '1 Ноябрь 2024',
       readTime: '8',
       category: 'Виза',
-      image:
-        'https://images.unsplash.com/photo-1721138942121-a26751b520b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aXNhJTIwYXBwbGljYXRpb24lMjBkb2N1bWVudHxlbnwxfHx8fDE3NjQzMjEzMTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: "/visa-application-document.jpg",
       content: `
         <p>Оформление визы часто кажется сложным и запутанным процессом. На самом деле, если действовать по шагам и пользоваться официальной информацией, всё проходит гораздо спокойнее. Разберём основной алгоритм.</p>
 
@@ -524,8 +522,7 @@ const blogPosts = {
       date: 'November 1, 2024',
       readTime: '8',
       category: 'Visa',
-      image:
-        'https://images.unsplash.com/photo-1721138942121-a26751b520b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aXNhJTIwYXBwbGljYXRpb24lMjBkb2N1bWVudHxlbnwxfHx8fDE3NjQzMjEzMTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: "/visa-application-document.jpg",
       content: `
         <p>Applying for a visa can feel stressful, but if you follow a clear process and rely on official information, it becomes much easier. Here’s a structured guide to help you.</p>
 
@@ -601,7 +598,7 @@ const blogPosts = {
       readTime: '5',
       category: 'Советы',
       image:
-        'https://images.unsplash.com/photo-1760648311436-d18d39f499bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYWNraW5nJTIwbHVnZ2FnZSUyMHN1aXRjYXNlfGVufDF8fHx8MTc2NDMyMTMxM3ww&ixlib=rb-4.1.0&q=80&w=1080',
+        '/travel-concept-with-open-luggage.jpg',
       content: `
         <p>Чемодан — ваш маленький дом в путешествии. Если собрать его правильно, поездка проходит намного спокойнее.</p>
 
@@ -629,7 +626,7 @@ const blogPosts = {
       readTime: '5',
       category: 'Tips',
       image:
-        'https://images.unsplash.com/photo-1760648311436-d18d39f499bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYWNraW5nJTIwbHVnZ2FnZSUyMHN1aXRjYXNlfGVufDF8fHx8MTc2NDMyMTMxM3ww&ixlib=rb-4.1.0&q=80&w=1080',
+        '/travel-concept-with-open-luggage.jpg',
       content: `
         <p>Packing well saves time, money and nerves. A smart suitcase means an easier trip.</p>
 
@@ -692,7 +689,7 @@ const blogPosts = {
       readTime: '10',
       category: 'Умра',
       image:
-        'https://images.unsplash.com/photo-1670607409952-785e81d21f01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWNjYSUyMGhhamolMjBwaWxncmltYWdlfGVufDF8fHx8MTc2NDMyMTMxNHww&ixlib=rb-4.1.0&q=80&w=1080',
+        '/umra-safari-2.jpg',
       content: `
         <p>Умра — важное духовное путешествие, которое требует и внутренней, и практической подготовки.</p>
 
@@ -725,7 +722,7 @@ const blogPosts = {
       readTime: '10',
       category: 'Umrah',
       image:
-        'https://images.unsplash.com/photo-1670607409952-785e81d21f01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWNjYSUyMGhhamolMjBwaWxncmltYWdlfGVufDF8fHx8MTc2NDMyMTMxNHww&ixlib=rb-4.1.0&q=80&w=1080',
+        '/umra-safari-2.jpg',
       content: `
         <p>Umrah is a special spiritual journey that benefits greatly from good preparation.</p>
 
@@ -839,6 +836,8 @@ export function BlogPost({ language, postId, onBack }: BlogPostProps) {
         <ImageWithFallback
           src={post.image}
           alt={post.title}
+          width={1080}
+          height={600}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />

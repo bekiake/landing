@@ -41,8 +41,9 @@ export function CTASection({ language }: CTASectionProps) {
         <Image
           src="https://images.unsplash.com/photo-1549654501-5d270e56e92c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhaXJwbGFuZSUyMHdpbmclMjBzdW5zZXR8ZW58MXx8fHwxNzYzNjM4NjY4fDA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Airplane wing sunset"
-          fill
-          className="object-cover"
+          width={1920}
+          height={1080}
+          className="object-cover w-full h-full"
           sizes="100vw"
           quality={80}
           loading="lazy"

@@ -76,8 +76,9 @@ export function AboutSection({ language }: AboutSectionProps) {
             <Image
               src="https://images.unsplash.com/photo-1748346918817-0b1b6b2f9bab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBvZmZpY2UlMjBtb2Rlcm58ZW58MXx8fHwxNzYzNzEwMzg2fDA&ixlib=rb-4.1.0&q=80&w=1080"
               alt={altTexts[language]}
-              fill
-              className="object-cover"
+              width={800}
+              height={600}
+              className="object-cover w-full h-full"
               sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
               quality={70}
               loading="lazy"

@@ -45,8 +45,9 @@ export function HeroSection({ language }: HeroSectionProps) {
         <Image
           src="/banner.png"
           alt={altTexts[language]}
-          fill
-          className="object-cover"
+          width={1920}
+          height={1080}
+          className="object-cover w-full h-full"
           priority
           sizes="(max-width: 600px) 100vw, (max-width: 1200px) 80vw, 60vw"
           quality={70}

@@ -36,8 +36,11 @@ export default function Custom404({ language = 'uz' }: Custom404Props) {
       <h1 className="text-6xl font-bold mb-6">404</h1>
       <h2 className="text-2xl font-semibold mb-4">{t.title}</h2>
       <p className="mb-8 text-gray-600">{t.description}</p>
-      <Link href="/">
-        <a className="inline-block bg-blue-700 text-white px-6 py-3 rounded-full hover:bg-blue-800 transition-all shadow-md">{t.home}</a>
+      <Link
+        href="/"
+        className="inline-block bg-blue-700 text-white px-6 py-3 rounded-full hover:bg-blue-800 transition-all shadow-md"
+      >
+        {t.home}
       </Link>
     </div>
   );

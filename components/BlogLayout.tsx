@@ -17,12 +17,8 @@ export function BlogLayout({ children }: BlogLayoutProps) {
             <span className="text-lg font-semibold">airtickett.uz</span>
           </Link>
           <nav className="hidden sm:flex items-center gap-4 text-sm">
-            <Link href="/blog" className="text-gray-600 hover:text-blue-700">
-              Barcha maqolalar
-            </Link>
-            <Link href="/" className="text-gray-600 hover:text-blue-700">
-              Bosh sahifa
-            </Link>
+            <Link href="/blog" className="text-gray-600 hover:text-blue-700">Barcha maqolalar</Link>
+            <Link href="/" className="text-gray-600 hover:text-blue-700">Bosh sahifa</Link>
           </nav>
         </div>
       </header>
@@ -35,12 +31,8 @@ export function BlogLayout({ children }: BlogLayoutProps) {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col gap-3 text-sm text-gray-500 sm:flex-row sm:items-center sm:justify-between">
           <span>© {new Date().getFullYear()} airtickett.uz. Barcha huquqlar himoyalangan.</span>
           <div className="flex gap-4">
-            <Link href="/" className="hover:text-blue-700">
-              Bosh sahifa
-            </Link>
-            <Link href="/blog" className="hover:text-blue-700">
-              Blog
-            </Link>
+            <Link href="/" className="hover:text-blue-700">Bosh sahifa</Link>
+            <Link href="/blog" className="hover:text-blue-700">Blog</Link>
           </div>
         </div>
       </footer>

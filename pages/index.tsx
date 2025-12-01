@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { Header } from "../components/Header";
 import { HeroSection } from "../components/HeroSection";
 import { StatsSection } from "../components/StatsSection";
@@ -20,7 +21,23 @@ interface HomeProps {
 }
 
 export default function Home({ initialLanguage = "uz" }: HomeProps) {
+  const router = useRouter();
   const [language, setLanguage] = useState<"uz" | "ru" | "en">(initialLanguage);
+
+  useEffect(() => {
+    if (!router.isReady) return;
+    
+    const pathLang =
+      router.pathname === "/ru"
+        ? "ru"
+        : router.pathname === "/en"
+        ? "en"
+        : "uz";
+    
+    if (pathLang !== language) {
+      setLanguage(pathLang);
+    }
+  }, [router.isReady, router.pathname, language]);
   // SEO uchun har tilga mos title va description
   const seo = {
     uz: {
@@ -90,7 +107,7 @@ export default function Home({ initialLanguage = "uz" }: HomeProps) {
           __html: JSON.stringify(getFAQSchema(language))
         }} />
       </Head>
-      <Header language={language} setLanguage={setLanguage} />
+      <Header language={language} />
       <main>
         <HeroSection language={language} />
         <StatsSection language={language} />

@@ -92,8 +92,7 @@ const translations = {
         date: '15 Ноябрь 2024',
         readTime: '5',
         category: 'Советы',
-        image:
-          'https://images.unsplash.com/photo-1764289556130-34f74024b2e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjB0aXBzJTIwam91cm5leXxlbnwxfHx8fDE3NjQzMjEzMTF8MA&ixlib=rb-4.1.0&q=80&w=1080',
+        image:'/travel-tips.jpg',
       },
       {
         id: 'cheap-flights',
@@ -103,8 +102,7 @@ const translations = {
         date: '10 Ноябрь 2024',
         readTime: '7',
         category: 'Авиабилеты',
-        image:
-          'https://images.unsplash.com/photo-1594671515324-ea48fea744d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXNzcG9ydCUyMGJvYXJkaW5nJTIwZmxpZ2h0fGVufDF8fHx8MTc2NDMyMTMxMnww&ixlib=rb-4.1.0&q=80&w=1080',
+        image:'/airticket.jpg',
       },
       {
         id: 'travel-budget',
@@ -126,7 +124,7 @@ const translations = {
         readTime: '8',
         category: 'Виза',
         image:
-          'https://images.unsplash.com/photo-1721138942121-a26751b520b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aXNhJTIwYXBwbGljYXRpb24lMjBkb2N1bWVudHxlbnwxfHx8fDE3NjQzMjEzMTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
+        '/visa-application-document.jpg'
       },
       {
         id: 'packing-tips',
@@ -137,7 +135,7 @@ const translations = {
         readTime: '5',
         category: 'Советы',
         image:
-          'https://images.unsplash.com/photo-1760648311436-d18d39f499bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYWNraW5nJTIwbHVnZ2FnZSUyMHN1aXRjYXNlfGVufDF8fHx8MTc2NDMyMTMxM3ww&ixlib=rb-4.1.0&q=80&w=1080',
+          '/travel-concept-with-open-luggage.jpg',
       },
       {
         id: 'umrah-preparation',
@@ -148,7 +146,7 @@ const translations = {
         readTime: '10',
         category: 'Умра',
         image:
-          'https://images.unsplash.com/photo-1670607409952-785e81d21f01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWNjYSUyMGhhamolMjBwaWxncmltYWdlfGVufDF8fHx8MTc2NDMyMTMxNHww&ixlib=rb-4.1.0&q=80&w=1080',
+          '/umra-safari-2.jpg',
       },
     ],
   },
@@ -167,7 +165,7 @@ const translations = {
         readTime: '5',
         category: 'Tips',
         image:
-          'https://images.unsplash.com/photo-1764289556130-34f74024b2e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjB0aXBzJTIwam91cm5leXxlbnwxfHx8fDE3NjQzMjEzMTF8MA&ixlib=rb-4.1.0&q=80&w=1080',
+          '/travel-tips.jpg',
       },
       {
         id: 'cheap-flights',
@@ -178,7 +176,7 @@ const translations = {
         readTime: '7',
         category: 'Flights',
         image:
-          'https://images.unsplash.com/photo-1594671515324-ea48fea744d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXNzcG9ydCUyMGJvYXJkaW5nJTIwZmxpZ2h0fGVufDF8fHx8MTc2NDMyMTMxMnww&ixlib=rb-4.1.0&q=80&w=1080',
+          '/airticket.jpg',
       },
       {
         id: 'travel-budget',
@@ -200,7 +198,7 @@ const translations = {
         readTime: '8',
         category: 'Visa',
         image:
-          'https://images.unsplash.com/photo-1721138942121-a26751b520b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aXNhJTIwYXBwbGljYXRpb24lMjBkb2N1bWVudHxlbnwxfHx8fDE3NjQzMjEzMTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
+          '/visa-application-document.jpg',
       },
       {
         id: 'packing-tips',
@@ -211,7 +209,7 @@ const translations = {
         readTime: '5',
         category: 'Tips',
         image:
-          'https://images.unsplash.com/photo-1760648311436-d18d39f499bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYWNraW5nJTIwbHVnZ2FnZSUyMHN1aXRjYXNlfGVufDF8fHx8MTc2NDMyMTMxM3ww&ixlib=rb-4.1.0&q=80&w=1080',
+          '/travel-concept-with-open-luggage.jpg',
       },
       {
         id: 'umrah-preparation',
@@ -222,7 +220,7 @@ const translations = {
         readTime: '10',
         category: 'Umrah',
         image:
-          'https://images.unsplash.com/photo-1670607409952-785e81d21f01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWNjYSUyMGhhamolMjBwaWxncmltYWdlfGVufDF8fHx8MTc2NDMyMTMxNHww&ixlib=rb-4.1.0&q=80&w=1080',
+          '/umra-safari-2.jpg',
       },
     ],
   },
@@ -247,10 +245,12 @@ export function BlogSection({ language, onPostClick }: BlogSectionProps) {
                 onClick={() => onPostClick?.(blog.id)}
                 className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer"
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative aspect-[3/2] overflow-hidden">
                   <ImageWithFallback
                     src={blog.image}
                     alt={blog.title}
+                    width={600}
+                    height={400}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4">

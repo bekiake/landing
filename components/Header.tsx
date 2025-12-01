@@ -5,7 +5,6 @@ import { useRouter } from 'next/router';
 
 interface HeaderProps {
   language: 'uz' | 'ru' | 'en';
-  setLanguage: (lang: 'uz' | 'ru' | 'en') => void;
 }
 
 const translations = {
@@ -41,23 +40,18 @@ const translations = {
   }
 };
 
-export function Header({ language, setLanguage }: HeaderProps) {
+export function Header({ language }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = translations[language];
   const router = useRouter();
 
   const handleLanguageChange = (lang: 'uz' | 'ru' | 'en') => {
-    // Asosiy sahifada tilni o'zgartirganda URL path-ni ham almashtiramiz
-    // uz -> '/', ru -> '/ru', en -> '/en'
-    setLanguage(lang);
-    if (router.pathname === '/' || router.pathname === '/ru' || router.pathname === '/en') {
-      if (lang === 'uz') {
-        router.push('/');
-      } else if (lang === 'ru') {
-        router.push('/ru');
-      } else if (lang === 'en') {
-        router.push('/en');
-      }
+    if (lang === 'uz') {
+      router.push('/');
+    } else if (lang === 'ru') {
+      router.push('/ru');
+    } else {
+      router.push('/en');
     }
   };
 

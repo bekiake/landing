@@ -98,8 +98,9 @@ export function DestinationsSection({ language }: DestinationsSectionProps) {
                       <Image
                         src={dest.image}
                         alt={altTexts[language](dest.city, dest.country[language])}
-                        fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        width={600}
+                        height={400}
+                        className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
                         sizes="(max-width: 1024px) 100vw, 25vw"
                         quality={80}
                         loading="lazy"

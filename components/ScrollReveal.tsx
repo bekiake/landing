@@ -61,7 +61,8 @@ export function ParallaxSection({
           <Image
             src={backgroundImage}
             alt=""
-            fill
+            width={1920}
+            height={1080}
             className="object-cover w-full h-full"
             quality={80}
             priority={false}
