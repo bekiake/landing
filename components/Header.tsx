@@ -16,7 +16,7 @@ const translations = {
       { label: 'Biz haqimizda', anchor: 'biz-haqimizda' },
       { label: 'Aloqa', anchor: 'footer' }
     ],
-    cta: "+998901234567"
+    cta: "+998977772502"
   },
   ru: {
     nav: [
@@ -26,7 +26,7 @@ const translations = {
       { label: 'О нас', anchor: 'biz-haqimizda' },
       { label: 'Контакты', anchor: 'footer' }
     ],
-    cta: '+998901234567'
+    cta: '+998977772502'
   },
   en: {
     nav: [
@@ -36,7 +36,7 @@ const translations = {
       { label: 'About Us', anchor: 'biz-haqimizda' },
       { label: 'Contact', anchor: 'footer' }
     ],
-    cta: '+998901234567'
+    cta: '+998977772502'
   }
 };
 
@@ -116,7 +116,7 @@ export function Header({ language }: HeaderProps) {
               </button>
             </div>
             <a
-              href="tel:+998901234567"
+              href="tel:+998977772502"
               className="flex items-center gap-2 bg-linear-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all shadow-md hover:shadow-lg"
               aria-label="Позвонить в агентство"
               role="button"
@@ -184,7 +184,7 @@ export function Header({ language }: HeaderProps) {
                 </button>
               </div>
               <a
-                href="tel:+998901234567"
+                href="tel:+998977772502"
                 className="flex items-center justify-center gap-2 bg-linear-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all shadow-md"
                 aria-label="Позвонить в агентство"
                 role="button"

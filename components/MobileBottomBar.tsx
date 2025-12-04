@@ -52,7 +52,7 @@ export function MobileBottomBar({ language }: MobileBottomBarProps) {
             <span className="text-xs text-gray-900">{t.telegram}</span>
         </a>
                 <a
-          href="tel:+998901234567"
+          href="tel:+998977772502"
           className="flex flex-col items-center gap-1 py-3 px-2 rounded-lg hover:bg-blue-50 transition-colors"
           aria-label={t.call}
           role="button"

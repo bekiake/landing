@@ -60,7 +60,7 @@ export function CTASection({ language }: CTASectionProps) {
 
         {/* Phone Number - Big & Prominent */}
         <a
-          href="tel:+998901234567"
+          href="tel:+998977772502"
           className="inline-block text-5xl md:text-6xl text-white mb-12 hover:text-yellow-300 transition-colors"
           aria-label={t.phone}
           role="button"
@@ -71,7 +71,7 @@ export function CTASection({ language }: CTASectionProps) {
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
-            href="tel:+998901234567"
+            href="tel:+998977772502"
             className="flex items-center gap-3 bg-white text-blue-700 px-8 py-4 rounded-full hover:bg-blue-50 transition-all shadow-xl hover:shadow-2xl"
             aria-label={t.phone}
             role="button"

@@ -69,7 +69,7 @@ export function HeroSection({ language }: HeroSectionProps) {
           </p>
             <div className="flex justify-center">
               <a
-                href="tel:+998901234567"
+                href="tel:+998977772502"
                 className="inline-flex items-center justify-center gap-3 bg-white text-blue-700 px-10 py-4 rounded-full hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl"
                 aria-label={t.callButton}
                 role="button"

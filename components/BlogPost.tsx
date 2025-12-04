@@ -882,7 +882,7 @@ export function BlogPost({ language, postId, onBack }: BlogPostProps) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+998901234567"
+              href="tel:+998977772502"
               className="inline-flex items-center justify-center gap-2 bg-white text-blue-700 px-8 py-3 rounded-full hover:bg-blue-50 transition-all"
             >
               Qo'ng'iroq qilish

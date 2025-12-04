@@ -83,7 +83,7 @@ export function Footer({ language }: FooterProps) {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:+998901234567"
+                  href="tel:+998977772502"
                   className="flex items-center gap-2 text-gray-700 hover:text-blue-400 transition-colors"
                   aria-label="Позвонить в агентство"
                   role="button"
