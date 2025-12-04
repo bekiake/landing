@@ -101,7 +101,7 @@ export default function Home({ initialLanguage = "uz" }: HomeProps) {
             },
             "contactPoint": {
               "@type": "ContactPoint",
-              "telephone": "+998 90 123 45 67",
+              "telephone": "+998 97 777 25 02",
               "contactType": "customer service"
             }
           })

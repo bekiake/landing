@@ -41,7 +41,7 @@ export function MobileBottomBar({ language }: MobileBottomBarProps) {
         
         </a>
         <a
-          href="https://t.me/airticket_uz"
+          href="https://t.me/apple3650"
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center gap-1 py-3 px-2 rounded-lg hover:bg-blue-50 transition-colors"

@@ -89,7 +89,7 @@ export function Footer({ language }: FooterProps) {
                   role="button"
                 >
                   <Phone className="w-4 h-4" aria-hidden="true" />
-                  +998 90 123 45 67
+                  +998 97 777 25 02
                 </a>
               </li>
               <li>
@@ -138,7 +138,7 @@ export function Footer({ language }: FooterProps) {
                 <Instagram className="w-5 h-5" aria-hidden="true" />
               </a>
               <a
-                href="https://t.me/airticket_uz"
+                href="https://t.me/apple3650"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 hover:bg-blue-500 rounded-full flex items-center justify-center transition-colors"

@@ -11,21 +11,21 @@ const translations = {
   uz: {
     title: "Tezkor bron qilish uchun qo'ng'iroq qiling",
     subtitle: 'Mutaxassislarimiz 24/7 xizmatda',
-    phone: '+998 90 123 45 67',
+    phone: '+998 97 777 25 02',
     whatsapp: 'WhatsApp',
     telegram: 'Telegram'
   },
   ru: {
     title: 'Звоните для быстрого бронирования',
     subtitle: 'Наши специалисты работают 24/7',
-    phone: '+998 90 123 45 67',
+    phone: '+998 97 777 25 02',
     whatsapp: 'WhatsApp',
     telegram: 'Telegram'
   },
   en: {
     title: 'Call for fast booking',
     subtitle: 'Our specialists are available 24/7',
-    phone: '+998 90 123 45 67',
+    phone: '+998 97 777 25 02',
     whatsapp: 'WhatsApp',
     telegram: 'Telegram'
   }
@@ -80,7 +80,7 @@ export function CTASection({ language }: CTASectionProps) {
             <span className="text-lg">{t.phone}</span>
           </a>
           <a
-            href="https://t.me/airticket_uz"
+            href="https://t.me/apple3650"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 bg-blue-500 text-white px-8 py-4 rounded-full hover:bg-blue-600 transition-all shadow-xl hover:shadow-2xl"
