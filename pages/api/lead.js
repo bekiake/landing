@@ -14,7 +14,6 @@ async function sendToTelegram(formData) {
 
 👤 *Ism:* ${formData.name || 'N/A'}
 📱 *Telefon:* ${formData.phone || 'N/A'}
-💬 *Xabar:* ${formData.message || 'N/A'}
 
 📅 *Sana:* ${new Date().toLocaleString('uz-UZ')}
   `.trim();
