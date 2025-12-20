@@ -20,6 +20,7 @@ Disallow: /_next/
 
 # UTM & Tracking parameters → Yandex duplicates cleanup
 Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term /
+Clean-param: lang /blog
 
 # Crawl optimization (Google ignores, Yandex respects)
 Crawl-delay: 1
@@ -52,3 +53,4 @@ Allow: /
 
 # Sitemap location (main XML)
 Sitemap: https://airtickett.uz/sitemap.xml
+Host: airtickett.uz

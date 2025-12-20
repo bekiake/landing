@@ -760,6 +760,10 @@ const translations = {
     relatedPosts: "O'xshash maqolalar",
     readMore: 'Batafsil',
     shareCopied: 'Havola nusxa olindi',
+    ctaTitle: 'Sayohat rejalashtirmoqchimisiz?',
+    ctaSubtitle: 'Biz sizga eng yaxshi aviabiletlar va Umra turlarini topishda yordam beramiz',
+    callButton: "Qo'ng'iroq qilish",
+    telegramButton: 'Telegram',
   },
   ru: {
     back: 'Назад',
@@ -768,6 +772,10 @@ const translations = {
     relatedPosts: 'Похожие статьи',
     readMore: 'Подробнее',
     shareCopied: 'Ссылка скопирована',
+    ctaTitle: 'Хотите спланировать путешествие?',
+    ctaSubtitle: 'Поможем подобрать лучшие авиабилеты и пакеты на Умру.',
+    callButton: 'Позвонить',
+    telegramButton: 'Телеграм',
   },
   en: {
     back: 'Back',
@@ -776,6 +784,10 @@ const translations = {
     relatedPosts: 'Related Posts',
     readMore: 'Read More',
     shareCopied: 'Link copied',
+    ctaTitle: 'Ready to plan your trip?',
+    ctaSubtitle: 'We help you find the best flights and Umrah packages.',
+    callButton: 'Call us',
+    telegramButton: 'Telegram',
   },
 } as const;
 
@@ -876,22 +888,22 @@ export function BlogPost({ language, postId, onBack }: BlogPostProps) {
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
         <div className="mt-12 p-8 bg-linear-to-r from-blue-600 to-blue-700 rounded-2xl text-white text-center">
-          <h3 className="mb-4 text-white">Sayohat rejalashtirmoqchimisiz?</h3>
+          <h3 className="mb-4 text-white">{t.ctaTitle}</h3>
           <p className="mb-6 text-blue-100">
-            Biz sizga eng yaxshi aviabiletlar va Umra turlarini topishda yordam beramiz
+            {t.ctaSubtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+998977772502"
               className="inline-flex items-center justify-center gap-2 bg-white text-blue-700 px-8 py-3 rounded-full hover:bg-blue-50 transition-all"
             >
-              Qo'ng'iroq qilish
+              {t.callButton}
             </a>
             <a
               href="https://t.me/apple3650"
               className="inline-flex items-center justify-center gap-2 bg-blue-500 text-white px-8 py-3 rounded-full hover:bg-blue-400 transition-all"
             >
-              Telegram
+              {t.telegramButton}
             </a>
           </div>
         </div>

@@ -20,7 +20,7 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Blog sahifalar (query parameter bilan) -->
+  <!-- Blog sahifalar (path-based routing) -->
   <url>
     <loc>https://airtickett.uz/blog</loc>
     <lastmod>2025-12-01</lastmod>
@@ -28,13 +28,13 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://airtickett.uz/blog?lang=ru</loc>
+    <loc>https://airtickett.uz/ru/blog</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://airtickett.uz/blog?lang=en</loc>
+    <loc>https://airtickett.uz/en/blog</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -48,13 +48,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://airtickett.uz/blog/travel-tips?lang=ru</loc>
+    <loc>https://airtickett.uz/ru/blog/travel-tips</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://airtickett.uz/blog/travel-tips?lang=en</loc>
+    <loc>https://airtickett.uz/en/blog/travel-tips</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -68,13 +68,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://airtickett.uz/blog/cheap-flights?lang=ru</loc>
+    <loc>https://airtickett.uz/ru/blog/cheap-flights</loc>
     <lastmod>2025-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://airtickett.uz/blog/cheap-flights?lang=en</loc>
+    <loc>https://airtickett.uz/en/blog/cheap-flights</loc>
     <lastmod>2025-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -88,13 +88,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://airtickett.uz/blog/travel-budget?lang=ru</loc>
+    <loc>https://airtickett.uz/ru/blog/travel-budget</loc>
     <lastmod>2025-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://airtickett.uz/blog/travel-budget?lang=en</loc>
+    <loc>https://airtickett.uz/en/blog/travel-budget</loc>
     <lastmod>2025-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -108,13 +108,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://airtickett.uz/blog/visa-guide?lang=ru</loc>
+    <loc>https://airtickett.uz/ru/blog/visa-guide</loc>
     <lastmod>2025-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://airtickett.uz/blog/visa-guide?lang=en</loc>
+    <loc>https://airtickett.uz/en/blog/visa-guide</loc>
     <lastmod>2025-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -128,13 +128,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://airtickett.uz/blog/packing-tips?lang=ru</loc>
+    <loc>https://airtickett.uz/ru/blog/packing-tips</loc>
     <lastmod>2025-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://airtickett.uz/blog/packing-tips?lang=en</loc>
+    <loc>https://airtickett.uz/en/blog/packing-tips</loc>
     <lastmod>2025-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -148,13 +148,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://airtickett.uz/blog/umrah-preparation?lang=ru</loc>
+    <loc>https://airtickett.uz/ru/blog/umrah-preparation</loc>
     <lastmod>2025-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://airtickett.uz/blog/umrah-preparation?lang=en</loc>
+    <loc>https://airtickett.uz/en/blog/umrah-preparation</loc>
     <lastmod>2025-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

@@ -1,3 +1,16 @@
+const blogSlugs = require('./data/blogSlugs.json');
+
+const languages = ['uz', 'ru', 'en'];
+
+const localizedBlogEntries = blogSlugs.flatMap(({ slug, lastmod }) =>
+  languages.map((lng) => ({
+    loc: `${lng === 'uz' ? '' : `/${lng}`}/blog/${slug}`,
+    changefreq: 'monthly',
+    priority: 0.8,
+    lastmod,
+  }))
+);
+
 /** @type {import('next-sitemap').IConfig} */
 
 module.exports = {
@@ -31,4 +44,6 @@ module.exports = {
     "/500",
     "/admin/*",
   ],
+
+  additionalPaths: async () => localizedBlogEntries,
 };

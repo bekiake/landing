@@ -16,20 +16,6 @@ export default function Document() {
         {/* Primary browser color */}
         <meta name="theme-color" content="#1e40af" />
 
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://airtickett.uz/" />
-
-        {/* ====== SOCIAL META TAGS ====== */}
-        <meta property="og:locale" content="uz_UZ" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Airtickett.uz – Turizm Agentligi" />
-        <meta property="og:image" content="https://airtickett.uz/logo.png" />
-        <meta property="og:image:width" content="512" />
-        <meta property="og:image:height" content="512" />
-        <meta property="og:image:alt" content="Airtickett.uz - Aviabiletlar va turizm xizmatlari" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://airtickett.uz/logo.png" />
-
         {/* ====== YANDEX VERIFICATION ====== */}
         <meta name="yandex-verification" content="94d2066f5ade0969" />
 
