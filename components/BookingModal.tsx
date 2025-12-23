@@ -37,33 +37,33 @@ export function BookingModal(props: BookingModalProps) {
     }
   }, [open]);
 
-    const texts: Record<'uz' | 'ru' | 'en', { title: string; desc: string; name: string; phone: string; send: string; success: string }> = {
-      uz: {
-        title: "So‘rov yuborish",
-        desc: "Telefon raqamingizni qoldiring — sizga tez orada qo‘ng‘iroq qilamiz.",
-        name: "Ismingiz",
-        phone: "Telefon raqami",
-        send: "Yuborish",
-        success: "So‘rovingiz qabul qilindi! Tez orada siz bilan bog‘lanamiz."
-      },
-      ru: {
-        title: "Отправить заявку",
-        desc: "Оставьте свой номер — мы перезвоним вам в ближайшее время.",
-        name: "Ваше имя",
-        phone: "Телефон",
-        send: "Отправить",
-        success: "Ваша заявка принята! Мы скоро свяжемся с вами."
-      },
-      en: {
-        title: "Send request",
-        desc: "Leave your phone number — we will call you back soon.",
-        name: "Your name",
-        phone: "Phone number",
-        send: "Send",
-        success: "Your request has been received! We will contact you soon."
-      }
-    };
-    const t = texts[language];
+  const texts: Record<'uz' | 'ru' | 'en', { title: string; desc: string; name: string; phone: string; send: string; success: string }> = {
+    uz: {
+      title: "So'rov yuborish",
+      desc: "Telefon raqamingizni qoldiring — sizga tez orada qo'ng'iroq qilamiz.",
+      name: "Ismingiz",
+      phone: "+998 90 123 45 67",
+      send: "Yuborish",
+      success: "So'rovingiz qabul qilindi! Tez orada siz bilan bog'lanamiz."
+    },
+    ru: {
+      title: "Отправить заявку",
+      desc: "Оставьте свой номер — мы перезвоним вам в ближайшее время.",
+      name: "Ваше имя",
+      phone: "+998 90 123 45 67",
+      send: "Отправить",
+      success: "Ваша заявка принята! Мы скоро свяжемся с вами."
+    },
+    en: {
+      title: "Send request",
+      desc: "Leave your phone number — we will call you back soon.",
+      name: "Your name",
+      phone: "+998 90 123 45 67",
+      send: "Send",
+      success: "Your request has been received! We will contact you soon."
+    }
+  };
+  const t = texts[language];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -123,7 +123,14 @@ export function BookingModal(props: BookingModalProps) {
             <Input
               placeholder={t.phone}
               value={phone}
-              onChange={e => setPhone(e.target.value)}
+              onChange={e => {
+                const value = e.target.value;
+                // Faqat raqamlar, +, -, (, ), va bo'shliqlarni qabul qilish
+                const phoneRegex = /^[0-9+\-()\s]*$/;
+                if (phoneRegex.test(value)) {
+                  setPhone(value);
+                }
+              }}
               required
               type="tel"
               disabled={loading}
